@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
 import { AvatarImage, Avatar } from "@/components/ui/avatar"
+import { FaPlus } from "react-icons/fa6";
+import { MessagesSquare, Plus } from "lucide-react";
 
 export function Secondary() {
   return (
@@ -87,14 +89,14 @@ export function Secondary() {
           <div className="bg-white  shadow rounded-lg p-4">
             <div className="flex justify-between">
           <div className="flex space-x-4 mb-4">
-            <Button variant="outline" className="rounded-lg">All brands</Button>
-            <Button variant="outline">Desk</Button>
-            <Button variant="outline">Tags</Button>
-            <Button variant="outline">
+            <Button variant="outline" className="rounded-xl">All brands</Button>
+            <Button variant="outline" className="rounded-xl">Desk</Button>
+            <Button variant="outline" className="rounded-xl">Tags</Button>
+            <Button variant="outline" className="rounded-xl">
               <ListOrderedIcon className="text-gray-400" />
               Sort
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" className="rounded-xl">
               <FilterIcon className="text-gray-400" />
               Filter
             </Button>
@@ -109,7 +111,7 @@ export function Secondary() {
             <Table className="border-slate-300">
               <TableHeader>
                 <TableRow>
-                  <TableHead>Brand</TableHead>
+                  <TableHead className="flex items-center justify-between">Brand   <Plus/></TableHead>
                   <TableHead>Description</TableHead>
                   <TableHead>Members</TableHead>
                   <TableHead>Categories</TableHead>
@@ -120,12 +122,17 @@ export function Secondary() {
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <div className="flex items-center space-x-2">
-                      <Avatar>
-                        <AvatarImage alt="Brand Logo" src="/placeholder.svg?height=24&width=24" />
-                      </Avatar>
+                    <div className="flex justify-between  space-x-24">
+                      <div className="flex items-center gap-2">
+                        <img alt="Brand Logo" src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png" width={30} height={30}  className="rounded-lg"/>
                       <span>Wix</span>
-                    </div>
+
+                      </div>
+                      <div className="flex gap-2">
+
+                      <MessagesSquare /> <span className="text-lg">2</span>
+                      </div>
+                                          </div>
                   </TableCell>
                   <TableCell>Develop a personalized fitness platform</TableCell>
                   <TableCell>
