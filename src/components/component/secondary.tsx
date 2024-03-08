@@ -9,15 +9,18 @@ import {
   Table,
 } from "@/components/ui/table";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
-import { FaPlus } from "react-icons/fa6";
-import { MessagesSquare, Plus, Settings, SlidersHorizontal } from "lucide-react";
+import { Archive, MessagesSquare, Plus, Settings, SlidersHorizontal } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
-import { CommandIcon } from "lucide-react";
-import Tooltip from "../ui/tooltip";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { BsSortNumericDown } from "react-icons/bs";
 
 import { IoMdArrowDropdown } from "react-icons/io";
+import {  Trash2, X } from "lucide-react";
+import { FaCaretDown } from "react-icons/fa";
+import Tooltip from "../ui/tooltip";
+import { Code, CommandIcon, Folder, LayoutIcon, PenTool, PlusSquare } from "lucide-react";
+import { FaPlus } from "react-icons/fa6";
+
 
 export function Secondary() {
   return (
@@ -25,11 +28,18 @@ export function Secondary() {
       <div className="flex">
         <div className="w-60 bg-white p-4">
           <div className="mb-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between pb-5">
+            <CommandIcon />
+
+              <div >
+                <p className="text-slate-400">NIC</p>
               <h2 className="text-lg font-semibold">InnovateHub</h2>
+
+
+              </div>
               <SettingsIcon className="text-gray-400" />
             </div>
-            <div className="mt-2">
+            <div className="mt-2 space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium">Design team</span>
                 <Badge variant="secondary">
@@ -52,14 +62,27 @@ export function Secondary() {
                 </Badge>
               </div>
               <Button className="mt-2" variant="ghost">
-                Create a team
+              <PlusSquare className="text-slate-600" /> Create a team
               </Button>
             </div>
           </div>
+          <div className="flex justify-between items-center">
+          <Button className="text-slate-500" variant="ghost">
+            FOLDERS
+              </Button>
+              <Plus className=" text-slate-500" width={15} height={15} />
+          </div>
+        
+
           <div className="flex flex-col space-y-1">
-            <Button className="justify-start text-left" variant="ghost">
-              Products
-            </Button>
+          <div className="flex justify-between items-center">
+          <Button  variant="ghost" className="flex gap-1">
+          <Folder width={15} height={15} />
+            Products
+              </Button>
+              <Plus  width={15} height={15} />
+          </div>
+            
             <Button className="justify-start text-left" variant="ghost">
               Roadmap
             </Button>
@@ -197,7 +220,10 @@ export function Secondary() {
                         <span>Wix</span>
                         {/* <div className="flex items-center space-x-2">
                       <Avatar>
-                        <AvatarImage alt="Brand Logo" src="/placeholder.svg?height=24&width=24" />
+                        <AvatarImage
+                          alt="Brand Logo"
+                          src="/placeholder.svg?height=24&width=24"
+                        />
                       </Avatar>
                       <span>Wix</span>
 
@@ -225,14 +251,21 @@ export function Secondary() {
               </TableBody>
             </Table>
           </div>
-          <div className="flex items-center justify-between mt-4">
-            <div>
-              <Button variant="outline">3 selected</Button>
-            </div>
-            <div className="flex space-x-2">
-              <Button variant="outline">Archive</Button>
-              <Button variant="outline">Delete</Button>
-              <Button variant="outline">More</Button>
+          <div className="flex items-center justify-center mt-4">
+            <div className="flex items-center border-b border-gray-300 rounded-lg p-4">
+              <Button><span className="bg-black text-white p-1 px-2 rounded-lg mr-1  font-semibold">3</span> selected</Button>
+              <Button variant="outline" className="ml-2 p-1 font-semibold ">
+              <span className="pr-1.5"><Archive /></span>Archive
+              </Button>
+              <Button variant="outline" className="ml-2 text-red-800 font-semibold">
+              <span className="pr-1.5"><Trash2 /> </span>Delete
+              </Button>
+              <Button variant="outline" className="ml-2 p-1 font-semibold">
+                More<span className="text-gray-500 pr-1.5 pl-1.5 pb-0.5 " ><FaCaretDown /></span>
+              </Button>
+              <Button className="ml-2 p-1 font-semibold text-gray-400">
+              <X />
+              </Button>
             </div>
           </div>
         </div>
