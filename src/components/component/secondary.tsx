@@ -1,11 +1,17 @@
-
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
-import { AvatarImage, Avatar } from "@/components/ui/avatar"
-import { CommandIcon } from "lucide-react"
-import { Checkbox } from "../ui/checkbox"
-import Tooltip from "../ui/tooltip"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  TableHead,
+  TableRow,
+  TableHeader,
+  TableCell,
+  TableBody,
+  Table,
+} from "@/components/ui/table";
+import { AvatarImage, Avatar } from "@/components/ui/avatar";
+import { Code, CommandIcon, Folder, LayoutIcon, PenTool, Plus, PlusSquare } from "lucide-react";
+import { Checkbox } from "../ui/checkbox";
+import Tooltip from "../ui/tooltip";
 
 export function Secondary() {
   return (
@@ -13,32 +19,72 @@ export function Secondary() {
       <div className="flex">
         <div className="w-60 bg-white p-4">
           <div className="mb-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between pb-5">
+            <CommandIcon />
+
+              <div >
+                <p className="text-slate-400">NIC</p>
               <h2 className="text-lg font-semibold">InnovateHub</h2>
+
+
+              </div>
               <SettingsIcon className="text-gray-400" />
             </div>
-            <div className="mt-2">
+            <div className="mt-2 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Design team</span>
-                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+1</Badge>
+
+                <span className="text-sm font-medium flex">
+                <LayoutIcon className="h-4 w-4 mr-2" />
+
+                  Design team
+                </span>
+                <Badge variant="secondary">
+                  <CommandIcon width={12} height={12} />
+                  +1
+                </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
-                <span className="text-sm font-medium">Marketing Team</span>
-                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+2</Badge>
+              <span className="text-sm font-medium flex">
+                <PenTool className="h-4 w-4 mr-2" />
+
+                  Marketing team
+                </span>                <Badge variant="secondary">
+                  <CommandIcon width={12} height={12} />
+                  +2
+                </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
-                <span className="text-sm font-medium">Development Team</span>
-                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+3</Badge>
+              <span className="text-sm font-medium flex">
+                <Code className="h-4 w-4 mr-2" />
+
+                  Development team
+                </span> <Badge variant="secondary">
+                  <CommandIcon width={12} height={12} />
+                  +3
+                </Badge>
               </div>
               <Button className="mt-2" variant="ghost">
-                Create a team
+              <PlusSquare className="text-slate-600" /> Create a team
               </Button>
             </div>
           </div>
+          <div className="flex justify-between items-center">
+          <Button className="text-slate-500" variant="ghost">
+            FOLDERS
+              </Button>
+              <Plus className=" text-slate-500" width={15} height={15} />
+          </div>
+        
+
           <div className="flex flex-col space-y-1">
-            <Button className="justify-start text-left" variant="ghost">
-              Products
-            </Button>
+          <div className="flex justify-between items-center">
+          <Button  variant="ghost" className="flex gap-1">
+          <Folder width={15} height={15} />
+            Products
+              </Button>
+              <Plus  width={15} height={15} />
+          </div>
+            
             <Button className="justify-start text-left" variant="ghost">
               Roadmap
             </Button>
@@ -119,18 +165,19 @@ export function Secondary() {
                 <TableRow>
                   <TableCell>
                     <div className="flex items-center space-x-2">
-                    <Checkbox id="terms" />
+                      <Checkbox id="terms" />
                       <Avatar>
-                        <AvatarImage alt="Brand Logo" src="/placeholder.svg?height=24&width=24" />
+                        <AvatarImage
+                          alt="Brand Logo"
+                          src="/placeholder.svg?height=24&width=24"
+                        />
                       </Avatar>
                       <span>Wix</span>
                     </div>
                   </TableCell>
                   <TableCell>Develop a personalized fitness platform</TableCell>
                   <TableCell>
-                    
-                      <Tooltip />
-                    
+                    <Tooltip />
                   </TableCell>
                   <TableCell>
                     <Badge>Automation</Badge>
@@ -156,11 +203,10 @@ export function Secondary() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-
-function SettingsIcon(props:any) {
+function SettingsIcon(props: any) {
   return (
     <svg
       {...props}
@@ -177,11 +223,10 @@ function SettingsIcon(props:any) {
       <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
-  )
+  );
 }
 
-
-function ListOrderedIcon(props:any) {
+function ListOrderedIcon(props: any) {
   return (
     <svg
       {...props}
@@ -202,11 +247,10 @@ function ListOrderedIcon(props:any) {
       <path d="M4 10h2" />
       <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" />
     </svg>
-  )
+  );
 }
 
-
-function FilterIcon(props:any) {
+function FilterIcon(props: any) {
   return (
     <svg
       {...props}
@@ -222,5 +266,5 @@ function FilterIcon(props:any) {
     >
       <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
     </svg>
-  )
+  );
 }
