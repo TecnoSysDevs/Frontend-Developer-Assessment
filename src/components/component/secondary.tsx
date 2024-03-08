@@ -9,11 +9,16 @@ import {
   Table,
 } from "@/components/ui/table";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
-import { Archive, Trash2, X } from "lucide-react";
+import { Archive, MessagesSquare, Plus, Settings, SlidersHorizontal } from "lucide-react";
+import { Checkbox } from "../ui/checkbox";
+import { HiOutlineSquares2X2 } from "react-icons/hi2";
+import { BsSortNumericDown } from "react-icons/bs";
+
+import { IoMdArrowDropdown } from "react-icons/io";
+import {  Trash2, X } from "lucide-react";
 import { FaCaretDown } from "react-icons/fa";
 import Tooltip from "../ui/tooltip";
-import { Code, CommandIcon, Folder, LayoutIcon, PenTool, Plus, PlusSquare } from "lucide-react";
-import { Checkbox } from "../ui/checkbox";
+import { Code, CommandIcon, Folder, LayoutIcon, PenTool, PlusSquare } from "lucide-react";
 import { FaPlus } from "react-icons/fa6";
 import { MessagesSquare, Settings } from "lucide-react";
 import { FaCaretUp } from "react-icons/fa6";
@@ -162,22 +167,22 @@ export function Secondary() {
           <div className="bg-white  shadow rounded-lg p-4">
             <div className="flex justify-between">
               <div className="flex space-x-4 mb-4">
-                <Button variant="outline" className="rounded-xl">
-                  All brands
+                <Button variant="outline" className="rounded-xl flex gap-1">
+               <HiOutlineSquares2X2 className="text-lg"/>    All brands <IoMdArrowDropdown/>
                 </Button>
-                <Button variant="outline" className="rounded-xl">
-                  Desk
+                <Button variant="outline" className="rounded-xl flex gap-1">
+                  Desk <IoMdArrowDropdown/>
                 </Button>
-                <Button variant="outline" className="rounded-xl">
-                  Tags
+                <Button variant="outline" className="rounded-xl flex gap-1">
+                  Tags <IoMdArrowDropdown/>
                 </Button>
-                <Button variant="outline" className="rounded-xl">
-                  <ListOrderedIcon className="text-gray-400" />
-                  Sort
+                <Button variant="outline" className="rounded-xl flex gap-1">
+                  <BsSortNumericDown/>
+                  Sort 
                 </Button>
-                <Button variant="outline" className="rounded-xl">
-                  <FilterIcon className="text-gray-400" />
-                  Filter
+                <Button variant="outline" className="rounded-xl flex gap-1">
+                <SlidersHorizontal  />
+                                  Filter
                 </Button>
               </div>
 
