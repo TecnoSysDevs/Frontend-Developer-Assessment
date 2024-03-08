@@ -158,7 +158,7 @@ export function Secondary() {
 }
 
 
-function SettingsIcon(props) {
+function SettingsIcon(props:any) {
   return (
     <svg
       {...props}
@@ -179,7 +179,7 @@ function SettingsIcon(props) {
 }
 
 
-function ListOrderedIcon(props) {
+function ListOrderedIcon(props:any) {
   return (
     <svg
       {...props}
@@ -204,7 +204,7 @@ function ListOrderedIcon(props) {
 }
 
 
-function FilterIcon(props) {
+function FilterIcon(props:any) {
   return (
     <svg
       {...props}
