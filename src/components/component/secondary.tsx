@@ -9,18 +9,16 @@ import {
   Table,
 } from "@/components/ui/table";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
-import { Archive, MessagesSquare, Plus, Settings, SlidersHorizontal } from "lucide-react";
-import { Checkbox } from "../ui/checkbox";
-import { HiOutlineSquares2X2 } from "react-icons/hi2";
-import { BsSortNumericDown } from "react-icons/bs";
-
-import { IoMdArrowDropdown } from "react-icons/io";
-import {  Trash2, X } from "lucide-react";
+import { Archive, Trash2, X } from "lucide-react";
 import { FaCaretDown } from "react-icons/fa";
 import Tooltip from "../ui/tooltip";
-import { Code, CommandIcon, Folder, LayoutIcon, PenTool, PlusSquare } from "lucide-react";
+import { Code, CommandIcon, Folder, LayoutIcon, PenTool, Plus, PlusSquare } from "lucide-react";
+import { Checkbox } from "../ui/checkbox";
 import { FaPlus } from "react-icons/fa6";
 import { FaCaretUp } from "react-icons/fa6";
+import { MessagesSquare, Settings } from "lucide-react";
+import { GrAnnounce } from "react-icons/gr";
+
 
 export function Secondary() {
   return (
@@ -30,7 +28,6 @@ export function Secondary() {
           <div className="mb-4">
             <div className="flex items-center justify-between pb-5">
             <CommandIcon />
-
               <div >
                 <p className="text-slate-400">NIC</p>
               <h2 className="text-lg font-semibold">InnovateHub</h2>
@@ -41,21 +38,21 @@ export function Secondary() {
             </div>
             <div className="mt-2 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Design team</span>
+                <span className="text-sm font-medium flex gap-2"><PenTool width={20} height={20} />Design team</span>
                 <Badge variant="secondary">
                   <CommandIcon width={12} height={12} />
                   +1
                 </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
-                <span className="text-sm font-medium">Marketing Team</span>
+                <span className="text-sm font-medium flex gap-2"><GrAnnounce width={20} height={20} />Marketing Team</span>
                 <Badge variant="secondary">
                   <CommandIcon width={12} height={12} />
                   +2
                 </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
-                <span className="text-sm font-medium">Development Team</span>
+                <span className="text-sm font-medium flex gap-2"><Code width={20} height={20} />Development Team</span>
                 <Badge variant="secondary">
                   <CommandIcon width={12} height={12} />
                   +3
@@ -147,9 +144,9 @@ export function Secondary() {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     />
                   </svg>
@@ -166,22 +163,22 @@ export function Secondary() {
           <div className="bg-white  shadow rounded-lg p-4">
             <div className="flex justify-between">
               <div className="flex space-x-4 mb-4">
-                <Button variant="outline" className="rounded-xl flex gap-1">
-               <HiOutlineSquares2X2 className="text-lg"/>    All brands <IoMdArrowDropdown/>
+                <Button variant="outline" className="rounded-xl">
+                  All brands
                 </Button>
-                <Button variant="outline" className="rounded-xl flex gap-1">
-                  Desk <IoMdArrowDropdown/>
+                <Button variant="outline" className="rounded-xl">
+                  Desk
                 </Button>
-                <Button variant="outline" className="rounded-xl flex gap-1">
-                  Tags <IoMdArrowDropdown/>
+                <Button variant="outline" className="rounded-xl">
+                  Tags
                 </Button>
-                <Button variant="outline" className="rounded-xl flex gap-1">
-                  <BsSortNumericDown/>
-                  Sort 
+                <Button variant="outline" className="rounded-xl">
+                  <ListOrderedIcon className="text-gray-400" />
+                  Sort
                 </Button>
-                <Button variant="outline" className="rounded-xl flex gap-1">
-                <SlidersHorizontal  />
-                                  Filter
+                <Button variant="outline" className="rounded-xl">
+                  <FilterIcon className="text-gray-400" />
+                  Filter
                 </Button>
               </div>
 
