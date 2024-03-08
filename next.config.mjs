@@ -2,7 +2,7 @@
 const nextConfig = {
     images: {
       
-        domains: ['images.unsplash.com','aceternity.com','unsplash.com','picsum.photos'],
+        domains: ['images.unsplash.com','aceternity.com','unsplash.com','picsum.photos','github.com'],
        
         remotePatterns: [
           {

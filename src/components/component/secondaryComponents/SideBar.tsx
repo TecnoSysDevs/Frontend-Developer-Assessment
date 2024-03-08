@@ -5,6 +5,7 @@ import { FaCaretUp } from 'react-icons/fa'
 import { GrAnnounce } from 'react-icons/gr'
 import SettingsIcon from './SettingsIcon'
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const SideBar = () => {
   return (
@@ -18,8 +19,10 @@ const SideBar = () => {
 
 
               </div>
-              <SettingsIcon className="text-gray-400" />
-            </div>
+              <Avatar className='w-8 h-8'>
+      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar>            </div>
             <div className="mt-2 space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium flex gap-2"><PenTool width={20} height={20} />Design team</span>
@@ -64,24 +67,24 @@ const SideBar = () => {
               <FaCaretUp  width={15} height={15} />
           </div>
             
-            <Button className="justify-start text-left" variant="ghost">
+            <Button className="justify-start ml-7    text-left" variant="ghost">
               Roadmap
             </Button>
-            <Button className="justify-start text-left" variant="ghost">
+            <Button className="justify-start ml-7 text-left" variant="ghost">
               Feedback
             </Button>
-            <Button className="justify-start text-left" variant="ghost">
+            <Button className="justify-start ml-7 text-left" variant="ghost">
               Performance
             </Button>
-            <Button className="justify-start text-left" variant="ghost">
+            <Button className="justify-start ml-7 text-left" variant="ghost">
               Team
             </Button>
-            <Button className="justify-start text-left" variant="ghost">
+            <Button className="justify-start ml-7 text-left" variant="ghost">
               Analytics
             </Button>
-            <Button className="mt-2" variant="ghost">
-              Add new sub
-            </Button>
+             <Button className="mt-2" variant="ghost">
+              <PlusSquare className="text-slate-600" /> Add New Sub
+              </Button>
           </div>
           <div className="flex flex-col space-y-1 mt-4">
           <div className="flex justify-between items-center">
