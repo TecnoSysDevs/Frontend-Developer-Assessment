@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Code, CommandIcon, Folder, PenTool, Plus, PlusSquare } from 'lucide-react'
+import { Code, CommandIcon, Folder, HelpCircle, PenTool, Plus, PlusSquare, UserPlus } from 'lucide-react'
 import React from 'react'
 import { FaCaretUp } from 'react-icons/fa'
 import { GrAnnounce } from 'react-icons/gr'
@@ -84,27 +84,46 @@ const SideBar = () => {
             </Button>
           </div>
           <div className="flex flex-col space-y-1 mt-4">
-            <Button className="justify-start text-left" variant="ghost">
-              Sales
-            </Button>
-            <Button className="justify-start text-left" variant="ghost">
-              Design
-            </Button>
-            <Button className="justify-start text-left" variant="ghost">
-              Office
-            </Button>
-            <Button className="justify-start text-left" variant="ghost">
-              Legal
-            </Button>
+          <div className="flex justify-between items-center">
+          <Button  variant="ghost" className="flex gap-1">
+          <Folder width={15} height={15} />
+            Sales
+              </Button>
+              <FaCaretUp  width={15} height={15} />
           </div>
-          <div className="mt-4">
-            <Button variant="ghost">Invite teammates</Button>
-            <Button className="mt-2" variant="ghost">
+          <div className="flex justify-between items-center">
+          <Button  variant="ghost" className="flex gap-1">
+          <Folder width={15} height={15} />
+            Design
+              </Button>
+              <FaCaretUp  width={15} height={15} />
+          </div>
+          <div className="flex justify-between items-center">
+          <Button  variant="ghost" className="flex gap-1">
+          <Folder width={15} height={15} />
+            Office
+              </Button>
+          </div>
+           <div className="flex justify-between items-center">
+          <Button  variant="ghost" className="flex gap-1">
+          <Folder width={15} height={15} />
+            Legal
+              </Button>
+          </div>
+          </div>
+          <div className="mt-10">
+            <Button variant="ghost" className='flex gap-1'> <UserPlus width={15} height={15} />Invite teammates</Button>
+            <Button className="mt-2 flex gap-1" variant="ghost">
+            <HelpCircle width={15} height={15} />
+
               Help and first steps
             </Button>
-            <Button className="mt-2" variant="outline">
+            <div className='flex items-center justify-between mt-2'>
+              <p className='text-xs text-center'>7 days left on Trial</p>
+            <Button className=" bg-black text-white rounded-lg" size="sm">
               Add billing
             </Button>
+            </div>
           </div>
         </div>
   )
