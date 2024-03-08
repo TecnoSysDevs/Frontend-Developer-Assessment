@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../ui/button'
-import { FilterIcon,ListOrderedIcon,Table } from 'lucide-react'
+import { Table } from 'lucide-react'
 import { Input } from '../ui/input'
 import { TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table'
 import { Avatar, AvatarImage } from '@radix-ui/react-avatar'

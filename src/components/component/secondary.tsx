@@ -16,6 +16,7 @@ import { Code, CommandIcon, Folder, LayoutIcon, PenTool, Plus, PlusSquare } from
 import { Checkbox } from "../ui/checkbox";
 import { FaPlus } from "react-icons/fa6";
 import { MessagesSquare, Settings } from "lucide-react";
+import { GrAnnounce } from "react-icons/gr";
 
 
 export function Secondary() {
@@ -26,7 +27,6 @@ export function Secondary() {
           <div className="mb-4">
             <div className="flex items-center justify-between pb-5">
             <CommandIcon />
-
               <div >
                 <p className="text-slate-400">NIC</p>
               <h2 className="text-lg font-semibold">InnovateHub</h2>
@@ -37,21 +37,21 @@ export function Secondary() {
             </div>
             <div className="mt-2 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium">Design team</span>
+                <span className="text-sm font-medium flex gap-2"><PenTool width={20} height={20} />Design team</span>
                 <Badge variant="secondary">
                   <CommandIcon width={12} height={12} />
                   +1
                 </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
-                <span className="text-sm font-medium">Marketing Team</span>
+                <span className="text-sm font-medium flex gap-2"><GrAnnounce width={20} height={20} />Marketing Team</span>
                 <Badge variant="secondary">
                   <CommandIcon width={12} height={12} />
                   +2
                 </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
-                <span className="text-sm font-medium">Development Team</span>
+                <span className="text-sm font-medium flex gap-2"><Code width={20} height={20} />Development Team</span>
                 <Badge variant="secondary">
                   <CommandIcon width={12} height={12} />
                   +3
@@ -143,9 +143,9 @@ export function Secondary() {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     />
                   </svg>
