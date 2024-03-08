@@ -3,6 +3,9 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
 import { AvatarImage, Avatar } from "@/components/ui/avatar"
+import { CommandIcon } from "lucide-react"
+import { Checkbox } from "../ui/checkbox"
+import Tooltip from "../ui/tooltip"
 
 export function Secondary() {
   return (
@@ -17,15 +20,15 @@ export function Secondary() {
             <div className="mt-2">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium">Design team</span>
-                <Badge variant="secondary">+1</Badge>
+                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+1</Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
                 <span className="text-sm font-medium">Marketing Team</span>
-                <Badge variant="secondary">+2</Badge>
+                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+2</Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
                 <span className="text-sm font-medium">Development Team</span>
-                <Badge variant="secondary">+3</Badge>
+                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+3</Badge>
               </div>
               <Button className="mt-2" variant="ghost">
                 Create a team
@@ -116,6 +119,7 @@ export function Secondary() {
                 <TableRow>
                   <TableCell>
                     <div className="flex items-center space-x-2">
+                    <Checkbox id="terms" />
                       <Avatar>
                         <AvatarImage alt="Brand Logo" src="/placeholder.svg?height=24&width=24" />
                       </Avatar>
@@ -124,11 +128,9 @@ export function Secondary() {
                   </TableCell>
                   <TableCell>Develop a personalized fitness platform</TableCell>
                   <TableCell>
-                    <div className="flex -space-x-2">
-                      <Avatar>
-                        <AvatarImage alt="Member" src="/placeholder.svg?height=24&width=24" />
-                      </Avatar>
-                    </div>
+                    
+                      <Tooltip />
+                    
                   </TableCell>
                   <TableCell>
                     <Badge>Automation</Badge>
@@ -158,7 +160,7 @@ export function Secondary() {
 }
 
 
-function SettingsIcon(props) {
+function SettingsIcon(props:any) {
   return (
     <svg
       {...props}
@@ -179,7 +181,7 @@ function SettingsIcon(props) {
 }
 
 
-function ListOrderedIcon(props) {
+function ListOrderedIcon(props:any) {
   return (
     <svg
       {...props}
@@ -204,7 +206,7 @@ function ListOrderedIcon(props) {
 }
 
 
-function FilterIcon(props) {
+function FilterIcon(props:any) {
   return (
     <svg
       {...props}
