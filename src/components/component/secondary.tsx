@@ -13,7 +13,7 @@ import { Code, CommandIcon, Folder, LayoutIcon, PenTool, Plus, PlusSquare } from
 import { Checkbox } from "../ui/checkbox";
 import { FaPlus } from "react-icons/fa6";
 import { MessagesSquare, Settings } from "lucide-react";
-
+import { FaCaretUp } from "react-icons/fa6";
 import Tooltip from "../ui/tooltip";
 
 export function Secondary() {
@@ -74,7 +74,7 @@ export function Secondary() {
           <Folder width={15} height={15} />
             Products
               </Button>
-              <Plus  width={15} height={15} />
+              <FaCaretUp  width={15} height={15} />
           </div>
             
             <Button className="justify-start text-left" variant="ghost">
