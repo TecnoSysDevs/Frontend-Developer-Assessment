@@ -20,7 +20,6 @@ import { FaCaretDown } from "react-icons/fa";
 import Tooltip from "../ui/tooltip";
 import { Code, CommandIcon, Folder, LayoutIcon, PenTool, PlusSquare } from "lucide-react";
 import { FaPlus } from "react-icons/fa6";
-import { MessagesSquare, Settings } from "lucide-react";
 import { FaCaretUp } from "react-icons/fa6";
 
 export function Secondary() {
