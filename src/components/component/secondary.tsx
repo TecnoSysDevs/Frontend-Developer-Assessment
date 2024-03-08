@@ -1,8 +1,16 @@
-
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
-import { AvatarImage, Avatar } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  TableHead,
+  TableRow,
+  TableHeader,
+  TableCell,
+  TableBody,
+  Table,
+} from "@/components/ui/table";
+import { AvatarImage, Avatar } from "@/components/ui/avatar";
+import { Archive, Trash2, X } from "lucide-react";
+import { FaCaretDown } from "react-icons/fa";
 
 export function Secondary() {
   return (
@@ -117,7 +125,10 @@ export function Secondary() {
                   <TableCell>
                     <div className="flex items-center space-x-2">
                       <Avatar>
-                        <AvatarImage alt="Brand Logo" src="/placeholder.svg?height=24&width=24" />
+                        <AvatarImage
+                          alt="Brand Logo"
+                          src="/placeholder.svg?height=24&width=24"
+                        />
                       </Avatar>
                       <span>Wix</span>
                     </div>
@@ -126,7 +137,10 @@ export function Secondary() {
                   <TableCell>
                     <div className="flex -space-x-2">
                       <Avatar>
-                        <AvatarImage alt="Member" src="/placeholder.svg?height=24&width=24" />
+                        <AvatarImage
+                          alt="Member"
+                          src="/placeholder.svg?height=24&width=24"
+                        />
                       </Avatar>
                     </div>
                   </TableCell>
@@ -141,22 +155,28 @@ export function Secondary() {
               </TableBody>
             </Table>
           </div>
-          <div className="flex items-center justify-between mt-4">
-            <div>
-              <Button variant="outline">3 selected</Button>
-            </div>
-            <div className="flex space-x-2">
-              <Button variant="outline">Archive</Button>
-              <Button variant="outline">Delete</Button>
-              <Button variant="outline">More</Button>
+          <div className="flex items-center justify-center mt-4">
+            <div className="flex items-center border-b border-gray-300 rounded-lg p-4">
+              <Button><span className="bg-black text-white p-1 px-2 rounded-lg mr-1  font-semibold">3</span> selected</Button>
+              <Button variant="outline" className="ml-2 p-1 font-semibold ">
+              <span className="pr-1.5"><Archive /></span>Archive
+              </Button>
+              <Button variant="outline" className="ml-2 text-red-800 font-semibold">
+              <span className="pr-1.5"><Trash2 /> </span>Delete
+              </Button>
+              <Button variant="outline" className="ml-2 p-1 font-semibold">
+                More<span className="text-gray-500 pr-1.5 pl-1.5 pb-0.5 " ><FaCaretDown /></span>
+              </Button>
+              <Button className="ml-2 p-1 font-semibold text-gray-400">
+              <X />
+              </Button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
 
 function SettingsIcon(props) {
   return (
@@ -175,9 +195,8 @@ function SettingsIcon(props) {
       <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
-  )
+  );
 }
-
 
 function ListOrderedIcon(props) {
   return (
@@ -200,9 +219,8 @@ function ListOrderedIcon(props) {
       <path d="M4 10h2" />
       <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" />
     </svg>
-  )
+  );
 }
-
 
 function FilterIcon(props) {
   return (
@@ -220,5 +238,5 @@ function FilterIcon(props) {
     >
       <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
     </svg>
-  )
+  );
 }
