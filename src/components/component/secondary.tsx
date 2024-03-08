@@ -11,6 +11,12 @@ import {
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { Archive, Trash2, X } from "lucide-react";
 import { FaCaretDown } from "react-icons/fa";
+import Tooltip from "../ui/tooltip";
+import { Code, CommandIcon, Folder, LayoutIcon, PenTool, Plus, PlusSquare } from "lucide-react";
+import { Checkbox } from "../ui/checkbox";
+import { FaPlus } from "react-icons/fa6";
+import { MessagesSquare, Settings } from "lucide-react";
+
 
 export function Secondary() {
   return (
@@ -18,32 +24,61 @@ export function Secondary() {
       <div className="flex">
         <div className="w-60 bg-white p-4">
           <div className="mb-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between pb-5">
+            <CommandIcon />
+
+              <div >
+                <p className="text-slate-400">NIC</p>
               <h2 className="text-lg font-semibold">InnovateHub</h2>
+
+
+              </div>
               <SettingsIcon className="text-gray-400" />
             </div>
-            <div className="mt-2">
+            <div className="mt-2 space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium">Design team</span>
-                <Badge variant="secondary">+1</Badge>
+                <Badge variant="secondary">
+                  <CommandIcon width={12} height={12} />
+                  +1
+                </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
                 <span className="text-sm font-medium">Marketing Team</span>
-                <Badge variant="secondary">+2</Badge>
+                <Badge variant="secondary">
+                  <CommandIcon width={12} height={12} />
+                  +2
+                </Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
                 <span className="text-sm font-medium">Development Team</span>
-                <Badge variant="secondary">+3</Badge>
+                <Badge variant="secondary">
+                  <CommandIcon width={12} height={12} />
+                  +3
+                </Badge>
               </div>
               <Button className="mt-2" variant="ghost">
-                Create a team
+              <PlusSquare className="text-slate-600" /> Create a team
               </Button>
             </div>
           </div>
+          <div className="flex justify-between items-center">
+          <Button className="text-slate-500" variant="ghost">
+            FOLDERS
+              </Button>
+              <Plus className=" text-slate-500" width={15} height={15} />
+          </div>
+        
+
           <div className="flex flex-col space-y-1">
-            <Button className="justify-start text-left" variant="ghost">
-              Products
-            </Button>
+          <div className="flex justify-between items-center">
+          <Button  variant="ghost" className="flex gap-1">
+          <Folder width={15} height={15} />
+            Products
+              </Button>
+              <Plus  width={15} height={15} />
+          </div>
+            
             <Button className="justify-start text-left" variant="ghost">
               Roadmap
             </Button>
@@ -90,29 +125,73 @@ export function Secondary() {
         <div className="flex-1 p-4">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-xl font-semibold">Products</h1>
-            <div className="flex space-x-2">
-              <Button variant="outline">Meeting</Button>
-              <Button variant="outline">Import / Export</Button>
+            <div className="flex gap-3">
+              <div className="relative">
+                <input
+                  className="appearance-none border-2  pl-10 border-gray-300 hover:border-gray-400 transition-colors rounded-xl  w-full py-2  text-gray-800 leading-tight focus:outline-none focus:ring-purple-600 focus:border-purple-600 focus:shadow-outline"
+                  id="username"
+                  type="text"
+                  placeholder="Search for..."
+                />
+
+                <div className="absolute left-0 inset-y-0 flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 ml-3 text-gray-400 hover:text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <Button variant="outline">
+                <MessagesSquare />
+              </Button>
+              <Button variant="outline">
+                <Settings />
+              </Button>
             </div>
           </div>
-          <div className="flex space-x-4 mb-4">
-            <Button variant="outline">All brands</Button>
-            <Button variant="outline">Desk</Button>
-            <Button variant="outline">Tags</Button>
-            <Button variant="outline">
-              <ListOrderedIcon className="text-gray-400" />
-              Sort
-            </Button>
-            <Button variant="outline">
-              <FilterIcon className="text-gray-400" />
-              Filter
-            </Button>
-          </div>
-          <div className="bg-white shadow rounded-lg p-4">
+          <div className="bg-white  shadow rounded-lg p-4">
+            <div className="flex justify-between">
+              <div className="flex space-x-4 mb-4">
+                <Button variant="outline" className="rounded-xl">
+                  All brands
+                </Button>
+                <Button variant="outline" className="rounded-xl">
+                  Desk
+                </Button>
+                <Button variant="outline" className="rounded-xl">
+                  Tags
+                </Button>
+                <Button variant="outline" className="rounded-xl">
+                  <ListOrderedIcon className="text-gray-400" />
+                  Sort
+                </Button>
+                <Button variant="outline" className="rounded-xl">
+                  <FilterIcon className="text-gray-400" />
+                  Filter
+                </Button>
+              </div>
+
+              <div className="flex space-x-2">
+                <Button variant="outline">Meeting</Button>
+                <Button variant="outline">Import / Export</Button>
+              </div>
+            </div>
             <Table className="border-slate-300">
               <TableHeader>
                 <TableRow>
-                  <TableHead>Brand</TableHead>
+                  <TableHead className="flex items-center justify-between">
+                    Brand <Plus />
+                  </TableHead>
                   <TableHead>Description</TableHead>
                   <TableHead>Members</TableHead>
                   <TableHead>Categories</TableHead>
@@ -123,7 +202,19 @@ export function Secondary() {
               <TableBody>
                 <TableRow>
                   <TableCell>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex justify-between  space-x-24">
+                      <div className="flex items-center gap-2">
+                        <Checkbox id="terms" />
+
+                        <img
+                          alt="Brand Logo"
+                          src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png"
+                          width={30}
+                          height={30}
+                          className="rounded-lg"
+                        />
+                        <span>Wix</span>
+                        {/* <div className="flex items-center space-x-2">
                       <Avatar>
                         <AvatarImage
                           alt="Brand Logo"
@@ -131,21 +222,22 @@ export function Secondary() {
                         />
                       </Avatar>
                       <span>Wix</span>
+
+                      // </div> */}
+                      </div>
+                      <div className="flex gap-2">
+                        <MessagesSquare /> <span className="text-lg">2</span>
+                      </div>
                     </div>
                   </TableCell>
                   <TableCell>Develop a personalized fitness platform</TableCell>
                   <TableCell>
-                    <div className="flex -space-x-2">
-                      <Avatar>
-                        <AvatarImage
-                          alt="Member"
-                          src="/placeholder.svg?height=24&width=24"
-                        />
-                      </Avatar>
-                    </div>
+                    <Tooltip />
                   </TableCell>
                   <TableCell>
-                    <Badge>Automation</Badge>
+                    <Badge className="w-20 flex justify-center items-center rounded-none h-4 text-violet-800 bg-slate-300">
+                      Automation
+                    </Badge>
                   </TableCell>
                   <TableCell>
                     <Badge variant="secondary">#DigitalTransformation</Badge>
@@ -178,7 +270,7 @@ export function Secondary() {
   );
 }
 
-function SettingsIcon(props) {
+function SettingsIcon(props: any) {
   return (
     <svg
       {...props}
@@ -198,7 +290,7 @@ function SettingsIcon(props) {
   );
 }
 
-function ListOrderedIcon(props) {
+function ListOrderedIcon(props: any) {
   return (
     <svg
       {...props}
@@ -222,7 +314,7 @@ function ListOrderedIcon(props) {
   );
 }
 
-function FilterIcon(props) {
+function FilterIcon(props: any) {
   return (
     <svg
       {...props}
