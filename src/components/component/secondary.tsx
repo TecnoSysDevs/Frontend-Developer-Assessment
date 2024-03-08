@@ -5,6 +5,9 @@ import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@
 import { AvatarImage, Avatar } from "@/components/ui/avatar"
 import { FaPlus } from "react-icons/fa6";
 import { MessagesSquare, Plus } from "lucide-react";
+import { Checkbox } from "../ui/checkbox";
+import { CommandIcon } from "lucide-react"
+import Tooltip from "../ui/tooltip"
 
 export function Secondary() {
   return (
@@ -19,15 +22,15 @@ export function Secondary() {
             <div className="mt-2">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium">Design team</span>
-                <Badge variant="secondary">+1</Badge>
+                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+1</Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
                 <span className="text-sm font-medium">Marketing Team</span>
-                <Badge variant="secondary">+2</Badge>
+                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+2</Badge>
               </div>
               <div className="flex items-center justify-between mt-1">
                 <span className="text-sm font-medium">Development Team</span>
-                <Badge variant="secondary">+3</Badge>
+                <Badge variant="secondary"><CommandIcon width={12} height={12}/>+3</Badge>
               </div>
               <Button className="mt-2" variant="ghost">
                 Create a team
@@ -124,9 +127,16 @@ export function Secondary() {
                   <TableCell>
                     <div className="flex justify-between  space-x-24">
                       <div className="flex items-center gap-2">
+                      <Checkbox id="terms" />
+
                         <img alt="Brand Logo" src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png" width={30} height={30}  className="rounded-lg"/>
+                    {/* <div className="flex items-center space-x-2">
+                      <Avatar>
+                        <AvatarImage alt="Brand Logo" src="/placeholder.svg?height=24&width=24" />
+                      </Avatar>
                       <span>Wix</span>
 
+                      // </div> */}
                       </div>
                       <div className="flex gap-2">
 
@@ -136,11 +146,9 @@ export function Secondary() {
                   </TableCell>
                   <TableCell>Develop a personalized fitness platform</TableCell>
                   <TableCell>
-                    <div className="flex -space-x-2">
-                      <Avatar>
-                        <AvatarImage alt="Member" src="/placeholder.svg?height=24&width=24" />
-                      </Avatar>
-                    </div>
+                    
+                      <Tooltip />
+                    
                   </TableCell>
                   <TableCell>
                     <Badge>Automation</Badge>

@@ -1,4 +1,4 @@
-import { BarChartIcon, BuildingIcon, CodeIcon, FolderIcon, MapIcon, MegaphoneIcon, PaletteIcon, PieChartIcon, TextIcon, UsersIcon } from 'lucide-react'
+import { BarChartIcon, BuildingIcon, CodeIcon, Command, CommandIcon, FolderIcon, MapIcon, MegaphoneIcon, PaletteIcon, PieChartIcon, TextIcon, UsersIcon } from 'lucide-react'
 import React from 'react'
 import { Badge } from '../ui/badge'
 import { Button } from '../ui/button'
