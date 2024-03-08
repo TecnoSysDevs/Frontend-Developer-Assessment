@@ -82,13 +82,12 @@ export function Secondary() {
         <div className="flex-1 p-4">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-xl font-semibold">Products</h1>
-            <div className="flex space-x-2">
-              <Button variant="outline">Meeting</Button>
-              <Button variant="outline">Import / Export</Button>
-            </div>
+          
           </div>
+          <div className="bg-white  shadow rounded-lg p-4">
+            <div className="flex justify-between">
           <div className="flex space-x-4 mb-4">
-            <Button variant="outline">All brands</Button>
+            <Button variant="outline" className="rounded-lg">All brands</Button>
             <Button variant="outline">Desk</Button>
             <Button variant="outline">Tags</Button>
             <Button variant="outline">
@@ -99,8 +98,14 @@ export function Secondary() {
               <FilterIcon className="text-gray-400" />
               Filter
             </Button>
+
+
           </div>
-          <div className="bg-white shadow rounded-lg p-4">
+          
+          <div className="flex space-x-2">
+              <Button variant="outline">Meeting</Button>
+              <Button variant="outline">Import / Export</Button>
+            </div></div>
             <Table className="border-slate-300">
               <TableHeader>
                 <TableRow>
