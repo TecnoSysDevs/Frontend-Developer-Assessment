@@ -9,12 +9,14 @@ import {
   Table,
 } from "@/components/ui/table";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
+import { Archive, Trash2, X } from "lucide-react";
+import { FaCaretDown } from "react-icons/fa";
+import Tooltip from "../ui/tooltip";
 import { Code, CommandIcon, Folder, LayoutIcon, PenTool, Plus, PlusSquare } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
 import { FaPlus } from "react-icons/fa6";
 import { MessagesSquare, Settings } from "lucide-react";
 import { FaCaretUp } from "react-icons/fa6";
-import Tooltip from "../ui/tooltip";
 
 export function Secondary() {
   return (
@@ -245,14 +247,21 @@ export function Secondary() {
               </TableBody>
             </Table>
           </div>
-          <div className="flex items-center justify-between mt-4">
-            <div>
-              <Button variant="outline">3 selected</Button>
-            </div>
-            <div className="flex space-x-2">
-              <Button variant="outline">Archive</Button>
-              <Button variant="outline">Delete</Button>
-              <Button variant="outline">More</Button>
+          <div className="flex items-center justify-center mt-4">
+            <div className="flex items-center border-b border-gray-300 rounded-lg p-4">
+              <Button><span className="bg-black text-white p-1 px-2 rounded-lg mr-1  font-semibold">3</span> selected</Button>
+              <Button variant="outline" className="ml-2 p-1 font-semibold ">
+              <span className="pr-1.5"><Archive /></span>Archive
+              </Button>
+              <Button variant="outline" className="ml-2 text-red-800 font-semibold">
+              <span className="pr-1.5"><Trash2 /> </span>Delete
+              </Button>
+              <Button variant="outline" className="ml-2 p-1 font-semibold">
+                More<span className="text-gray-500 pr-1.5 pl-1.5 pb-0.5 " ><FaCaretDown /></span>
+              </Button>
+              <Button className="ml-2 p-1 font-semibold text-gray-400">
+              <X />
+              </Button>
             </div>
           </div>
         </div>
